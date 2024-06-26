@@ -1,0 +1,168 @@
+body {
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #101010;
+}
+
+.nav {
+    background-color: #FF8C00;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: fixed;
+    width: 96%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav .logo {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    height: 125px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    color: #f5f5f7;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.nav ul li a:hover {
+    border-radius: 10px;
+    background-color: #f5f5f7;
+    text-decoration: none;
+    color: #FF3737;
+    transition: color 0.2s;
+}
+
+.main-content {
+    margin-top: 180px; 
+}
+
+.banner {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.banner .banner_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-section {
+    padding: 10px;
+    margin: 20px 10px;
+    
+}
+
+.content-section h2 {
+    text-align: center;
+    margin: 5   px;
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.paragraph {
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+    /* margin: auto; */
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+.p1 {
+    float: left;
+    width: 35%;
+    text-align: justify;
+    /* margin: auto; */
+    padding-left: 150px;
+    /* padding-right: 500px; */
+}
+
+.p2 {
+    float: right;
+    width: 35%;
+    text-align: justify;
+    /* margin: auto; */
+    /* padding-left: 100px; */
+    /* padding-left: 300px; */
+    padding-right: 150px;
+}
+
+.objectives {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.objective-box {
+    background-color: #212121;
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.partners {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.partners h2{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.partners img {
+    height: 50px;
+}
+
+.team-profile {
+    text-align: center;
+}
+
+.team-profile .profile {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.team-profile .profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.footer {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+    /* border-top: 1px solid #ddd; */
+}
