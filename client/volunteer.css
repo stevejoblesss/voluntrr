@@ -1,0 +1,162 @@
+body {
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #101010;
+}
+
+.nav {
+    background-color: #FF8C00;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: fixed;
+    width: 90%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav .logo {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    height: 125px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    color: #f5f5f7;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.nav ul li a:hover {
+    border-radius: 10px;
+    background-color: #f5f5f7;
+    text-decoration: none;
+    color: #FF3737;
+    transition: color 0.2s;
+}
+
+.main-content {
+    margin-top: 170px; 
+    overflow: hidden; /* To ensure no unwanted lines */
+}
+
+.volunteer-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map, .search-filter, .volunteer-list, .volunteer-details {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 30%;
+}
+
+.map {
+    width: 35%;
+}
+
+#map-placeholder {
+    background-color: #333;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.search-filter label, .search-filter select, .search-filter input {
+    display: block;
+    margin: 10px 0;
+}
+
+.volunteer-item {
+    background-color: #444;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.volunteer-item:hover {
+    background-color: #555;
+}
+
+.volunteer-details {
+    width: 100%;
+}
+
+#details-placeholder {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#details-placeholder h2, #details-placeholder h3 {
+    text-align: center;
+}
+
+#details-placeholder form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#details-placeholder form label, #details-placeholder form input {
+    margin: 10px 0;
+}
+
+.footer {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .volunteer-section {
+        flex-direction: column;
+    }
+
+    .map, .search-filter, .volunteer-list, .volunteer-details {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
