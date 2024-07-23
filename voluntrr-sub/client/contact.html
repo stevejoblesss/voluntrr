@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Contact Us - Voluntrr</title>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="images/Voluntrr.png" alt="Voluntrr Logo" class="logo">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="banner">
+            <img src="images/Voluntrr-Banner.png" alt="Voluntrr Banner" class="banner_img">
+        </div>
+        <div class="content-section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@voluntrr.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone Number</h3>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>123 Voluntrr St, City, Country</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="submit_contact_form.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>copyright @ Voluntrr</p>
+        </div>
+    </div>
+</body>
+
+</html>

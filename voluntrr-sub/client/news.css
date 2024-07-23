@@ -1,0 +1,278 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.banner_img {
+    width: 100%;
+    height: auto;
+}
+
+.content-section {
+    margin-top: 20px;
+}
+
+.news-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-article {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news_img {
+    width: 100%;
+    height: auto;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+body {
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #101010;
+}
+
+.nav {
+    background-color: #FF8C00;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: fixed;
+    width: 97%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav .logo {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    height: 70px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    color: #f5f5f7;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.nav ul li a:hover {
+    border-radius: 10px;
+    background-color: #f5f5f7;
+    text-decoration: none;
+    color: #FF3737;
+    transition: color 0.2s;
+}
+
+.main-content {
+    margin-top: 160px; 
+    overflow: hidden; /* To ensure no unwanted lines */
+}
+
+.banner {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.banner .banner_img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-section {
+    padding: 20px 0; /* Adjusted for smoother transition */
+    margin: 0;
+    background-image: url("images/charity_yay.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content-section h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 42px;
+    font-weight: 500;
+    /* background-color: #101010; */
+}
+
+.paragraph {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    text-align: justify;
+    padding: 0 25px;
+}
+
+.paragraph .p1, .paragraph .p2 {
+    width: 48%;
+}
+
+.objectives-title {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.objectives-title hr {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #fff;
+}
+
+
+.objectives {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjusted for see-through effect */
+}
+
+.objective-box {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.objective-box h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.objective-box p {
+    font-size: 20px;
+}
+
+.partners {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.partners h2 {
+    margin: 5px 0; 
+}
+
+.partners img {
+    height: 50px;
+}
+
+.team-profile {
+    text-align: center;
+}
+
+.team-profile .profile {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.team-profile .profile img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.team-profile .profile p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+}
