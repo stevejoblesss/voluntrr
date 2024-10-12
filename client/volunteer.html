@@ -7,9 +7,9 @@
     <link rel="stylesheet" type="text/css" href="volunteer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>-->
     <title>Volunteer - Voluntrr</title>
 </head>
 
@@ -17,51 +17,109 @@
     <div class="nav">
         <img src="images/Voluntrr.png" alt="Voluntrr Logo" class="logo">
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Volunteer</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
     <div class="main-content">
         <div class="volunteer-section">
-            <div class="map">
-                <h2>Interactive Map</h2>
-                <!-- Placeholder for map -->
-                <div id="map-placeholder">Map about where the volunteer is</div>
-            </div>
             <div class="search-filter">
                 <h2>Search Filter</h2>
                 <label for="location">Location</label>
-                <select id="location">
+                <select id="myLocation" onchange="searchFunction()">
+                    <option value="">Select Location</option>
                     <option value="penang">Penang</option>
                     <option value="johor">Johor</option>
                     <option value="kedah">Kedah</option>
                 </select>
                 <label for="date">Date</label>
-                <input type="date" id="date">
+                <input type="date" id="date" onchange="searchFunction()">
                 <label for="categories">Categories</label>
-                <select id="categories">
+                <select id="myCategories" onchange="searchFunction()">
+                    <option value="">Select Category</option>
                     <option value="cleaning-city">Cleaning City</option>
                     <option value="cleaning-ocean">Cleaning Ocean</option>
                     <option value="helping-elderly">Helping Elderly</option>
                 </select>
+                <div class="volunteer-list">
+                    <div class="volunteer-item" onclick="showList('cleaning-city-list')">
+                        <p>Cleaning City</p>
+                    </div>
+                    <div class="volunteer-item" onclick="showList('cleaning-ocean-list')">
+                        <p>Cleaning Ocean</p>
+                    </div>
+                    <div class="volunteer-item" onclick="showList('helping-elderly-list')">
+                        <p>Helping Elderly</p>
+                    </div>
+                </div>
             </div>
-            <div class="volunteer-list">
-                <h2>List of Volunteers</h2>
-                <div class="volunteer-item" onclick="showDetails('cleaning-city')">
-                    <p>Cleaning City</p>
-                </div>
-                <div class="volunteer-item" onclick="showDetails('cleaning-ocean')">
-                    <p>Cleaning Ocean</p>
-                </div>
+    
+            <div class="list-item">
+                <ul id="cleaning-city-list" class="volunteer-list-items" style="display: none;">
+                    <div class="item" data-location="penang" data-category="cleaning-city" data-date="2024-07-15" data-lat="5.4164" data-lng="100.3327">
+                        <img src="images/clean1.jpg" alt="Cleaning City">
+                        <div class="item-content">
+                            <h4>Park Cleaning</h4>
+                            <p>Sunday(15/7/24): 9.00am-1.00pm</p>
+                        </div>
+                    </div>
+                    <div class="item" data-location="kedah" data-category="cleaning-city" data-date="2024-07-20" data-lat="6.1184" data-lng="100.3686">
+                        <img src="images/clean14.jpg" alt="Cleaning City">
+                        <div class="item-content">
+                            <h4>Park Cleaning Kedah</h4>
+                            <p>Saturday(20/7/24): 10.00am-2.00pm</p>
+                        </div>
+                    </div>
+                </ul>
+                <ul id="cleaning-ocean-list" class="volunteer-list-items" style="display: none;">
+                    <div class="item" data-location="penang" data-category="cleaning-ocean" data-date="2024-07-27" data-lat="5.4211" data-lng="100.3430">
+                        <img src="images/clean2.jpg" alt="Cleaning City">
+                        <div class="item-content">
+                            
+                            <h4>Beach Cleaning</h4>
+                            <p>Saturday(27/7/24): 9.00am-1.00pm</p>
+                        </div>
+                    </div>
+                    <div class="item" data-location="johor" data-category="cleaning-ocean" data-date="2024-08-01" data-lat="1.4927" data-lng="103.7414">
+                        <img src="images/clean3.jpg" alt="Cleaning City">
+                        <div class="item-content">
+                            
+                            <h4>Beach Cleaning Johor</h4>
+                            <p>Thursday(1/8/24): 8.00am-12.00pm</p>
+                        </div>
+                    </div>
+                </ul>
+                <ul id="helping-elderly-list" class="volunteer-list-items" style="display: none;">
+                    <div class="item" data-location="johor" data-category="helping-elderly" data-date="2024-07-31" data-lat="1.4605" data-lng="103.7638">
+                        <img src="images/clean4.jpg" alt="Cleaning City">
+                        <div class="item-content">
+                            <h4>Rumah Orang Tua Johor</h4>
+                            <p>Sunday(31/7/24): 9.00am-1.00pm</p>
+                        </div>
+                    </div>
+                    <div class="item" data-location="kedah" data-category="helping-elderly" data-date="2024-08-05" data-lat="6.1248" data-lng="100.3679">
+                        <img src="images/clean5.jpg" alt="Cleaning City" height="200" width="auto">
+                        <div class="item-content"> 
+                            <h4>Rumah Orang Tua Kedah</h4>
+                            <p>Monday(5/8/24): 10.00am-2.00pm</p>
+                        </div>
+                    </div>
+                    <div class="item" data-location="penang" data-category="helping-elderly" data-date="2024-08-10" data-lat="5.4204" data-lng="100.3430">
+                        <img src="images/clean6.jpg" alt="Cleaning City">
+                        <div class="item-content">
+                            <h4>Rumah Orang Tua Penang</h4>
+                            <p>Saturday(10/8/24): 9.00am-1.00pm</p>
+                        </div>
+                    </div>
+                </ul>
             </div>
         </div>
         <div class="volunteer-details">
             <div id="details-placeholder">
                 <!-- Placeholder for volunteer details -->
                 <h2>Volunteer Details</h2>
-                <!-- <p>Details about the selected volunteer activity will appear here.</p> -->
                 <h3>Register to be a Volunteer Now!</h3>
                 <form>
                     <label for="name">Name:</label>
@@ -70,7 +128,7 @@
                     <input type="text" id="contact" name="contact">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email">
-                    <button type="submit">Submit</button>
+                    <button type="submit" onclick="searchFunction()">Submit</button>
                 </form>
             </div>
         </div>
@@ -78,6 +136,76 @@
     <div class="footer">
         <p>copyright @ Voluntrr</p>
     </div>
+
+    <script>
+
+        function searchFunction() {
+            let location = document.getElementById('myLocation').value.toLowerCase();
+            let category = document.getElementById('myCategories').value.toLowerCase();
+            let date = document.getElementById('date').value;
+            let items = document.getElementsByClassName('item');
+
+            for (let i = 0; i < items.length; i++) {
+                let itemLocation = items[i].getAttribute('data-location');
+                let itemCategory = items[i].getAttribute('data-category');
+                let itemDate = items[i].getAttribute('data-date');
+
+                if ((location === "" || itemLocation === location) &&
+                    (category === "" || itemCategory === category) &&
+                    (date === "" || itemDate === date)) {
+                    items[i].style.display = "list-item";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+
+        function showList(listId) {
+            var lists = document.getElementsByClassName('volunteer-list-items');
+            for (var i = 0; i < lists.length; i++) {
+                lists[i].style.display = 'none';
+            }
+            document.getElementById(listId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let items = document.getElementsByClassName('item');
+            for (let i = 0; i < items.length; i++) {
+                items[i].addEventListener('click', function () {
+                    let lat = parseFloat(this.getAttribute('data-lat'));
+                    let lng = parseFloat(this.getAttribute('data-lng'));
+                    let title = this.querySelector('h4').innerText;
+                    let date = this.querySelector('p').innerText;
+
+                    let position = { lat: lat, lng: lng };
+
+                    // Clear previous markers
+                    for (let marker of markers) {
+                        marker.setMap(null);
+                    }
+                    markers = [];
+
+                    let marker = new google.maps.Marker({
+                        position: position,
+                        map: map,
+                        title: title
+                    });
+
+                    markers.push(marker);
+
+                    map.setCenter(position);
+                    map.setZoom(12);
+
+                    // Update details
+                    let detailsPlaceholder = document.getElementById('details-placeholder');
+                    detailsPlaceholder.innerHTML = `
+                        <h2>${title}</h2>
+                        <p>${date}</p>
+                    `;
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -5,6 +5,36 @@ body {
     color: white;
     background-color: #101010;
 }
+.search-filter {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-filter h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #888;
+}
+.search-filter label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #777;
+}
+
+.search-filter select,
+.search-filter input[type="date"] {
+    width: calc(80% - 5px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
 
 .nav {
     background-color: #FF8C00;
@@ -14,8 +44,8 @@ body {
     justify-content: space-between;
     border-radius: 15px;
     position: fixed;
-    width: 90%;
-    top: 10px;
+    width: 97%;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,7 +55,7 @@ body {
 .nav .logo {
     padding-left: 20px;
     padding-bottom: 5px;
-    height: 125px;
+    height: 70px;
 }
 
 .nav ul {
@@ -57,7 +87,7 @@ body {
 }
 
 .main-content {
-    margin-top: 170px; 
+    margin-top: 125px; 
     overflow: hidden; /* To ensure no unwanted lines */
 }
 
@@ -66,12 +96,19 @@ body {
     justify-content: space-between;
 }
 
-.map, .search-filter, .volunteer-list, .volunteer-details {
+.map, .search-filter, .volunteer-list, .volunteer-details{
     background-color: rgba(33, 33, 33, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
     width: 30%;
+}
+.list-item{
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 70%;
 }
 
 .map {
@@ -80,7 +117,7 @@ body {
 
 #map-placeholder {
     background-color: #333;
-    height: 200px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,9 +146,74 @@ body {
 .volunteer-details {
     width: 100%;
 }
+.volunteer-list {
+    display: flex;             /* Enables Flexbox layout */
+    flex-direction: column;    /* Arranges items vertically */
+    gap: 5px;                 /* Space between items */
+    margin-top: 10px;          /* Space above the list */
+}
+
+.volunteer-item {
+    background-color: #f9f9f9;
+    padding: 10px 10px;        /* Adjust padding as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.volunteer-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.volunteer-item:hover {
+    background-color: #f1f1f1;
+}
+
+.volunteer-list-items {
+    margin-top: 20px; /* Space above the list */
+}
+
+.item {
+    display: flex;                  /* Align items horizontally */
+    align-items: center;            /* Center items vertically */
+    border-bottom: 1px solid #c7a3a3;  /* Line separating items */
+    padding: 10px 0;                /* Space inside items */
+    margin-bottom: 10px;            /* Space between items */
+}
+
+.item:last-child {
+    border-bottom: none;            /* Remove border from the last item */
+}
+
+.item-image {
+    width: 150px;                   /* Width of the image */
+    height: 100px;                   /* Maintain aspect ratio */
+    margin-right: 20px;             /* Space between image and text */
+}
+
+.item-content {
+    flex: 1;
+    padding:5px;                        /* Allows content to take up the remaining space */
+}
+
+.item-content h4 {
+    margin: 0 5 5px;                /* Margin around the heading */
+    font-size: 18px;
+    color: #cfbbbb;
+}
+
+.item-content p {
+    margin: 0;                      /* Remove default margin */
+    font-size: 14px;
+    color: #d3a9a9;
+}
+
 
 #details-placeholder {
-    background-color: #333;
+    background-color: #ddb1b1;
     padding: 20px;
     border-radius: 10px;
 }
@@ -123,7 +225,7 @@ body {
 #details-placeholder form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+   align-items: center;
 }
 
 #details-placeholder form label, #details-placeholder form input {

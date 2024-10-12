@@ -1,4 +1,99 @@
 body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.banner {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.banner .banner_img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-section {
+    margin-top: 10px;
+}
+
+.news-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-article {
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    width: 27%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news_img {
+    width: 100%;
+    height: auto;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+body {
     font-family: "Fredoka", sans-serif;
     margin: 0;
     padding: 0;
@@ -183,44 +278,6 @@ body {
 }
 
 .team-profile .profile p {
-    margin: 5px 0;
-    font-size: 18px;
-}
-
-
-
-.partners {
-    text-align: center;
-}
-.splogo {
-    background-color: white;
-    width: 90px; /* Adjust as needed */
-    height: 90px; /* Adjust as needed */
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Adjust as needed */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
-    margin: 10px auto; /* Optional: centers and adds space between logos */
-    text-align: center;
-}
-
-
-.partners .splogo {
-    display: inline-block;
-    margin: 0 20px;
-
-}
-
-.partners .splogo img {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-}
-
-.partners .splogo p {
     margin: 5px 0;
     font-size: 18px;
 }
